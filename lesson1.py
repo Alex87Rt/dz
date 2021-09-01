@@ -41,18 +41,18 @@
 
 
 # 3.
-# def random_number_generator(a, b):
-#     vocabulary = {}
-#     list = []
-#     for _ in range(10):
-#         num = int((b - a) * random.random() + a)
-#         list.append(num)
-#         vocabulary.update({'elem_{}'.format(num): num})
-#     return (list, vocabulary)
-#
-# print(random_number_generator(2, 5))
-#
-#
+def random_number_generator(a, b):
+    vocabulary = {}
+    list = []
+    for _ in range(10):
+        num = int((b - a) * random.random() + a)
+        list.append(num)
+        vocabulary.update({'elem_{}'.format(num): num})
+    return (list, vocabulary)
+
+print(random_number_generator(2, 5))
+
+
 # 4.
 def percent(number, months):
     if months not in [6, 12, 24]:
@@ -70,17 +70,17 @@ def percent(number, months):
     return True
 
 
-# def deposit(number, months):
-#     perc = percent(number, months)
-#     total = number
-#     for month in range(months):
-#         profit = total * perc / 100 / 12
-#         total += profit
-#     print(round(total))
-#
-# deposit(100000, 6)
-# #
-# # 5.
+def deposit(number, months):
+    perc = percent(number, months)
+    total = number
+    for month in range(months):
+        profit = total * perc / 100 / 12
+        total += profit
+    print(round(total))
+
+deposit(100000, 6)
+
+# 5.
 def charge_deposit(number, months, charge=1):
     perc = percent(number, months)
     total = number
