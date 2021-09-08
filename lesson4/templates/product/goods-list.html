@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-    <form action="{% url 'product:add' %}">
-        <button class="btn btn-primary">Добавить продукт</button>
-    </form>
+{#    <form action="{% url 'product:add' %}">#}
+        <button
+            class="js-create-good btn btn-primary"
+            data-goods-url="{% url 'product:add' %}"
+        >Добавить продукт</button>
+{#    </form>#}
 
     <table class="table">
         <tr>
@@ -22,4 +27,7 @@
             </tr>
         {% endfor %}
     </table>
+
+
+
 {% endblock %}
